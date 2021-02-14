@@ -31,7 +31,7 @@ def bananaDrag(request):
     #subcat = db.child("users").get()
     idk = {"a":"b"}
     dataJSON = dumps(idk)
-    return render(request, 'banana.html', {'data': dataJSON})
+    return render(request, 'gui.html', {'data': dataJSON})
 
 
 
