@@ -126,6 +126,7 @@
   <script>
     var container = document.querySelector("#container");
     var movingFriend = document.querySelector("#movingFriend");
+    var greenCart = document.getElementsByClassName("greenCart");
     var activeItem = null;
     var active = false;
 
@@ -178,9 +179,17 @@
 
         active = false;
         activeItem = null;
+
+        var bodyRect = document.body.getBoundingClientRect();
+        //alert("alert 1");
+        elemRect = greenCart.getBoundingClientRect();
+        alert("alert 2");
+        offset   = elemRect.top - bodyRect.top;
+        alert("alert 3");
+        
+
+        alert("Element is " + offset + " vertical pixels from <body>");
     }
-
-
 
     function drag(e) {
         if (active) {
